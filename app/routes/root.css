@@ -1,0 +1,23 @@
+.navbar-logo {
+  height: 70px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 60px;
+  }
+
+  .mobile-btn {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
