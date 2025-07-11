@@ -5,7 +5,6 @@ import "./styles/mobilefooter.css";
 export default function MobileFooter() {
     return (
         <footer className="mobile-footer d-block d-md-none">
-            {/* Logo and Links Row */}
             <div className="mobile-footer-top-row">
                 <div className="footer-logo">
                     <img src="/footer.png" alt="CuddleMind Logo" />
@@ -20,7 +19,6 @@ export default function MobileFooter() {
                 </div>
             </div>
 
-            {/* Left Text */}
             <div className="footer-left-text">
                 <h2>
                     Speak with one of our health experts to discover how <br />
@@ -28,8 +26,6 @@ export default function MobileFooter() {
                 </h2>
             </div>
 
-            {/* Bottom Row: Right Text, Icons, Copy */}
-            {/* Bottom Row: Left side = icons + copy, Right side = text + button */}
             <div className="footer-bottom-row">
 
                 <div className="footer-left-group">
