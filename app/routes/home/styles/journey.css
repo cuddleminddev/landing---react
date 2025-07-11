@@ -1,0 +1,165 @@
+.journey-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #1679E0;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.journey-left {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.journey-free {
+    background-color: #28B674;
+    color: #FAFE1D;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: fit-content;
+    height: 2rem;
+    line-height: 1;
+}
+
+.journey-free p {
+    margin: 0;
+}
+
+.journey-heading h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.journey-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.journey-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.journey-list-left,
+.journey-list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1 1 200px;
+}
+
+.journey-list i {
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.journey-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.journey-buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.journey-buttons button:first-child {
+    background-color: #24B574;
+    color: white;
+}
+
+.journey-buttons button:first-child:hover {
+    background-color: #24B574;
+}
+
+.journey-buttons button:last-child {
+    background-color: transparent;
+    border: 2px solid #24B574;
+    color: white;
+}
+
+.journey-buttons button:last-child:hover {
+    background-color: #24B574;
+    color: white;
+}
+
+.journey-border {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-top: 2px solid #FAFE1D;
+    width: 100%;
+}
+
+.journey-rating {
+    font-size: 1rem;
+    color: white;
+}
+
+.journey-rating i {
+    color: #FEC01D;
+    margin-right: 0.2rem;
+}
+
+.journey-right {
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 100%;
+}
+
+.journey-right img {
+    max-height: 700px;
+    /* Make the image much taller */
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .journey-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .journey-heading h3 {
+        font-size: 2rem;
+    }
+
+    .journey-buttons {
+        flex-direction: column;
+    }
+
+    .journey-buttons button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .journey-right img {
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+}

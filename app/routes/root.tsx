@@ -52,7 +52,7 @@ export default function RootLayout() {
                 </div>
             </nav>
 
-            <main className="px-4 pt-4">
+            <main>
                 <Outlet />
             </main>
 
