@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+footer {
+    background-color: #f8f9fa;
+    padding: 2rem 3rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Top section */
+footer .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+footer .top .left {
+    flex: 1;
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 60%;
+    color: #000;
+}
+
+footer .top .left h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #000;
+    line-height: 1.3;
+}
+
+footer .top .right {
+    flex: 1;
+    max-width: 35%;
+    font-size: 0.9rem;
+    text-align: right;
+    color: #333;
+    padding: 0 6rem 0 0;
+}
+
+footer .top .right p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+footer .top .right .btn {
+    margin-top: 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+footer .top .right .btn:hover {
+    background-color: #333;
+}
+
+/* Divider */
+footer .divider {
+    border-bottom: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+/* Bottom section */
+footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+footer .bottom .left {
+    flex: 1;
+    max-width: 40%;
+}
+
+footer .bottom .left .img img {
+    max-width: 150px;
+    height: auto;
+    filter: brightness(0);
+}
+
+footer .bottom .left .copy {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer .bottom .right {
+    flex: 1;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 6rem 0 0;
+}
+
+footer .bottom .right .icons {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+footer .bottom .right .icons i {
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .bottom .right .icons i:hover {
+    color: #000;
+}
+
+footer .bottom .right .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+footer .bottom .right .nav1,
+footer .bottom .right .nav2 {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer .bottom .right .nav1 a,
+footer .bottom .right .nav2 a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+footer .bottom .right .nav1 a:hover,
+footer .bottom .right .nav2 a:hover {
+    color: #000;
+}

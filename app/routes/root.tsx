@@ -1,6 +1,8 @@
 import { Outlet, Link } from "react-router-dom";
 import { useState } from "react";
-import "./root.css";
+import "./styles/root.css";
+import Footer from "./footer";
+import MobileFooter from "./mobilefooter";
 
 export default function RootLayout() {
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -53,6 +55,9 @@ export default function RootLayout() {
             <main className="px-4 pt-4">
                 <Outlet />
             </main>
+
+            <Footer/>
+            <MobileFooter/>
         </>
     );
 }

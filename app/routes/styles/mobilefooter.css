@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+.mobile-footer {
+    background-color: #f8f9fa;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+.mobile-footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: 50px;
+    filter: brightness(0);
+}
+
+.footer-links {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.footer-left-text h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-right: 5rem;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Left side: icons + copy */
+.footer-left-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    min-width: 150px;
+}
+
+/* Footer icons */
+.footer-left-group .footer-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.footer-left-group .footer-icons i:hover {
+    color: #000;
+}
+
+/* Footer copy */
+.footer-left-group .footer-copy {
+    font-size: 0.75rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* Right side: text + button */
+.footer-right-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-right-text p {
+    font-size: 0.85rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.footer-right-text .btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+}
