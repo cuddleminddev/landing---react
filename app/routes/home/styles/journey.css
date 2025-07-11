@@ -157,9 +157,7 @@
         text-align: center;
     }
 
-    .journey-right img {
-        max-height: 400px;
-        width: 100%;
-        object-fit: cover;
+    .journey-right {
+        display: none;
     }
 }
