@@ -1,0 +1,120 @@
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F9FF;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.app-left {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.app-right {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.app-content h4 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 0.3rem;
+}
+
+.app-content p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+}
+
+.store-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.app-playstore,
+.app-appstore {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: black;
+    border: 1px solid #ddd;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    flex: 0 0 auto;
+    max-width: 200px;
+    width: 100%;
+}
+
+.app-playstore:hover,
+.app-appstore:hover {
+    transform: translateY(-3px);
+}
+
+.app-playstore img,
+.app-appstore img {
+    width: 30px;
+    height: 30px;
+}
+
+.app-playstore p,
+.app-appstore p {
+    font-size: 0.85rem;
+    color: white;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .app-left img {
+        max-width: 90%;
+    }
+
+    .app-content h4 {
+        font-size: 1.2rem;
+    }
+
+    .app-content p {
+        font-size: 0.85rem;
+    }
+
+    .store-images {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .app-playstore,
+    .app-appstore {
+        padding: 0.5rem 0.6rem;
+        width: 100%;
+    }
+
+    .app-playstore p,
+    .app-appstore p {
+        font-size: 0.75rem;
+    }
+}
