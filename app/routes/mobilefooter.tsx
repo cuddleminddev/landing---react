@@ -31,15 +31,6 @@ export default function MobileFooter() {
             {/* Bottom Row: Right Text, Icons, Copy */}
             {/* Bottom Row: Left side = icons + copy, Right side = text + button */}
             <div className="footer-bottom-row">
-                <div className="footer-right-text">
-                    <p>
-                        Start your health journey with Cuddle mind today. <br />
-                        Your health, your data, your power.
-                    </p>
-                    <button className="btn btn-dark rounded-pill mt-3">
-                        Get Started For Free
-                    </button>
-                </div>
 
                 <div className="footer-left-group">
                     <div className="footer-icons">
@@ -50,6 +41,16 @@ export default function MobileFooter() {
                     <div className="footer-copy">
                         © 2024 Healix. All Rights Reserved.
                     </div>
+                </div>
+
+                <div className="footer-right-text">
+                    <p>
+                        Start your health journey with Cuddle mind today. <br />
+                        Your health, your data, your power.
+                    </p>
+                    <button className="btn btn-dark rounded-pill">
+                        Get Started For Free
+                    </button>
                 </div>
             </div>
 
