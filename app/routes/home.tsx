@@ -3,6 +3,7 @@ import App from "./home/app";
 import Card from "./home/card";
 import Count from "./home/count";
 import Journey from "./home/journey";
+import Matter from "./home/matter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <div style={{ margin: "2rem 0", padding: "1.5rem" }}>
         <Card />
       </div>
+      <Matter/>
     </>
   );
 }
