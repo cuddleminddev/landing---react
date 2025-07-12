@@ -1,5 +1,6 @@
 import About from "./home/about";
 import App from "./home/app";
+import Card from "./home/card";
 import Count from "./home/count";
 import Journey from "./home/journey";
 
@@ -8,8 +9,11 @@ export default function Home() {
     <>
       <Journey />
       <App />
-      <Count/>
-      <About/>
+      <Count />
+      <About />
+      <div style={{ margin: "2rem 0", padding: "1.5rem" }}>
+        <Card />
+      </div>
     </>
   );
 }
