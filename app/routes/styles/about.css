@@ -52,14 +52,14 @@
 }
 
 .aboutus-impact {
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
     text-align: center;
 }
 
 .aboutus-impact h3 {
     color: #009DD1;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .aboutus-profe {
@@ -82,7 +82,7 @@
 }
 
 .aboutus-carousel {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {

@@ -75,9 +75,10 @@ export default function About() {
                     counseling, psychotherapy, or social work. They bring real-world experience to support your emotional,
                     psychological, and behavioral well-being.
                 </p>
-                <div className="aboutus-carousel">
-                    <CarouselSlider professionals={professionals} />
-                </div>
+            </div>
+
+            <div className="aboutus-carousel">
+                <CarouselSlider professionals={professionals} />
             </div>
         </div>
     );
