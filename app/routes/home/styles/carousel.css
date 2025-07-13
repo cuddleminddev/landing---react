@@ -1,7 +1,6 @@
 .carousel-container {
-    padding: 2rem;
+    padding: 1rem;
     font-family: 'Nunito', sans-serif;
-    background-color: #f4f8fc;
 }
 
 .carousel-heading {
@@ -14,22 +13,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    padding: 0 3rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .carousel-track {
     display: flex;
     overflow: hidden;
-    width: 90%;
     gap: 1rem;
+    width: 100%;
+    /* max-width: 1000px; */
+    justify-content: center;
 }
 
 .carousel-card {
     flex: 0 0 30%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    max-width: 300px;
 }
 
 .card-image {
@@ -65,7 +65,6 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    /* ensure it's above the images */
     background-color: rgba(2, 95, 22, 0.8);
     border: none;
     color: white;
@@ -81,14 +80,18 @@
 }
 
 .carousel-button.left {
-    left: 1rem;
+    left: 10rem;
 }
 
 .carousel-button.right {
-    right: 1rem;
+    right: 10rem;
 }
 
 @media (max-width: 768px) {
+    .carousel-wrapper {
+        padding: 0 1rem;
+    }
+
     .carousel-track {
         flex-direction: row;
         gap: 0;
