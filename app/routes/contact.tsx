@@ -41,7 +41,7 @@ export default function Contact() {
     };
 
 
-    const handleSubmit = (e:any) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length > 0) {
