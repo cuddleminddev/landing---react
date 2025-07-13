@@ -45,7 +45,7 @@ export default function Carousel() {
             setIsMobile(window.innerWidth <= 768);
         };
 
-        checkScreen(); // Initial check
+        checkScreen();
         window.addEventListener("resize", checkScreen);
 
         return () => window.removeEventListener("resize", checkScreen);
@@ -56,8 +56,23 @@ export default function Carousel() {
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prev) => (prev === 0 ? professionals.length - 1 : prev - 1));
+        setCurrentIndex((prev) =>
+            (prev - 1 + professionals.length) % professionals.length
+        );
     };
+
+    const visibleCards = isMobile ? 1 : 3;
+
+    const getVisibleProfessionals = () => {
+        const result = [];
+        for (let i = 0; i < visibleCards; i++) {
+            const index = (currentIndex + i) % professionals.length;
+            result.push(professionals[index]);
+        }
+        return result;
+    };
+
+    const visibleProfessionals = getVisibleProfessionals();
 
     const handleTouchStart = (e: any) => {
         setTouchStartX(e.touches[0].clientX);
@@ -76,13 +91,6 @@ export default function Carousel() {
 
         setTouchStartX(null);
     };
-
-    const visibleCards = isMobile ? 1 : 3;
-
-    const visibleProfessionals = professionals.slice(
-        currentIndex,
-        currentIndex + visibleCards
-    );
 
     return (
         <div className="carousel-container">
