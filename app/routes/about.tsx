@@ -1,6 +1,48 @@
 import "./styles/about.css"
+import StatsGrid from "./home/statsgrid";
+import CarouselSlider from "./home/CarouselSlider";
 
 export default function About() {
+    const stats = [
+        { value: "100+", label: "Qualified Doctors" },
+        { value: "24/7", label: "Support Available" },
+        { value: "100+", label: "Thriving Users" },
+        { value: "98%", label: "Satisfaction Rate" },
+    ];
+
+    const professionals = [
+        {
+            name: "Dr. John Smith",
+            specialty: "Cardiologist",
+            image: "/pro1.png"
+        },
+        {
+            name: "Dr. Emily Davis",
+            specialty: "Neurologist",
+            image: "/pro1.png"
+        },
+        {
+            name: "Dr. Sarah Lee",
+            specialty: "Pediatrician",
+            image: "/home1.png"
+        },
+        {
+            name: "Dr. David Brown",
+            specialty: "Orthopedic Surgeon",
+            image: "/home2.png"
+        },
+        {
+            name: "Dr. Olivia Wilson",
+            specialty: "Dermatologist",
+            image: "/home3.png"
+        },
+        {
+            name: "Dr. Michael Chen",
+            specialty: "Oncologist",
+            image: "/home4.png"
+        }
+    ];
+
     return (
         <div className="aboutus-container">
             <div className="aboutus-headings">
@@ -23,24 +65,7 @@ export default function About() {
 
             <div className="aboutus-impact">
                 <h3>Our Impact</h3>
-                <div className="aboutus-counts">
-                    <div>
-                        <h4>100+</h4>
-                        <h5>Qualified Doctors</h5>
-                    </div>
-                    <div>
-                        <h4>24/7</h4>
-                        <h5>Support Available</h5>
-                    </div>
-                    <div>
-                        <h4>100+</h4>
-                        <h5>Thriving Users</h5>
-                    </div>
-                    <div>
-                        <h4>98%</h4>
-                        <h5>Satisfaction Rate</h5>
-                    </div>
-                </div>
+                <StatsGrid stats={stats} />
             </div>
 
             <div className="aboutus-profe">
@@ -51,7 +76,7 @@ export default function About() {
                     psychological, and behavioral well-being.
                 </p>
                 <div className="aboutus-carousel">
-                    {/* Carousel or doctor list here */}
+                    <CarouselSlider professionals={professionals} />
                 </div>
             </div>
         </div>

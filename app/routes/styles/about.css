@@ -2,7 +2,7 @@
     margin-top: 5rem;
     font-family: 'Nunito', sans-serif;
     padding: 0 1rem;
-    color: #333;
+    /* color: #333; */
 }
 
 .aboutus-headings {
@@ -32,7 +32,6 @@
     font-weight: 600;
 }
 
-/* MISSION SECTION */
 .aboutus-mission {
     text-align: center;
     padding: 4rem 1rem;
@@ -52,7 +51,6 @@
     line-height: 1.8;
 }
 
-/* IMPACT SECTION */
 .aboutus-impact {
     padding: 4rem 1rem;
     text-align: center;
@@ -64,40 +62,6 @@
     margin-bottom: 2rem;
 }
 
-.aboutus-counts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.aboutus-counts>div {
-    background-color: #f5faff;
-    border: 1px solid #d0e6ff;
-    border-radius: 10px;
-    padding: 2rem;
-    width: 220px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s;
-}
-
-.aboutus-counts>div:hover {
-    transform: translateY(-5px);
-}
-
-.aboutus-counts h4 {
-    color: #1877E1;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.aboutus-counts h5 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #333;
-}
-
-/* PROFESSIONALS SECTION */
 .aboutus-profe {
     text-align: center;
     padding: 4rem 1rem;
@@ -121,7 +85,6 @@
     margin-top: 2rem;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .aboutus-headings h3 {
         font-size: 2.5rem;
