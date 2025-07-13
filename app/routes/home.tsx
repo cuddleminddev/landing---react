@@ -6,6 +6,7 @@ import Count from "./home/count";
 import Journey from "./home/journey";
 import Matter from "./home/matter";
 import Mind from "./home/mind";
+import Quotes from "./home/quotes";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Mind />
       </div>
       <Carousel/>
+      <Quotes/>
     </>
   );
 }

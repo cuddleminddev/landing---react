@@ -1,0 +1,62 @@
+.quotes-container {
+    padding: 2rem;
+    font-family: 'Nunito', sans-serif;
+    background-color: white;
+}
+
+.quotes-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quotes-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.quotes-cards div {
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.quote {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    padding-bottom: 1rem;
+    margin-bottom: auto;
+}
+
+.quotes-cards div p:last-child {
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.quotes-cards div:nth-child(1) {
+    background-color: #97353542;
+}
+
+.quotes-cards div:nth-child(2) {
+    background-color: #28b67444;
+}
+
+.quotes-cards div:nth-child(3) {
+    background-color: #cfcc004d;
+    color: #222;
+    border-bottom-color: #555;
+}
+
+.quotes-cards div:nth-child(4) {
+    background-color: #4228b642;
+}
+
+@media (max-width: 768px) {
+    .quotes-cards {
+        grid-template-columns: 1fr;
+    }
+}
