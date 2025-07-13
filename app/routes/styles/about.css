@@ -1,0 +1,143 @@
+.aboutus-container {
+    margin-top: 5rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 0 1rem;
+    color: #333;
+}
+
+.aboutus-headings {
+    background-image: url('../../../public/aboutbg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.aboutus-headings h3 {
+    color: #1C3BA4;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.aboutus-headings p {
+    color: #1183DC;
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* MISSION SECTION */
+.aboutus-mission {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.aboutus-mission h3 {
+    color: #009DD1;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutus-mission p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* IMPACT SECTION */
+.aboutus-impact {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.aboutus-impact h3 {
+    color: #009DD1;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.aboutus-counts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.aboutus-counts>div {
+    background-color: #f5faff;
+    border: 1px solid #d0e6ff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.aboutus-counts>div:hover {
+    transform: translateY(-5px);
+}
+
+.aboutus-counts h4 {
+    color: #1877E1;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.aboutus-counts h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* PROFESSIONALS SECTION */
+.aboutus-profe {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.aboutus-profe h3 {
+    font-size: 2.5rem;
+    color: #009DD1;
+    margin-bottom: 1.5rem;
+}
+
+.aboutus-profe p {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.aboutus-carousel {
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .aboutus-headings h3 {
+        font-size: 2.5rem;
+    }
+
+    .aboutus-headings p {
+        font-size: 1.5rem;
+    }
+
+    .aboutus-mission p,
+    .aboutus-profe p {
+        font-size: 1rem;
+    }
+
+    .aboutus-counts>div {
+        width: 100%;
+        max-width: 300px;
+    }
+}
