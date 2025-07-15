@@ -14,7 +14,7 @@ export default function Count() {
             <StatsGrid stats={stats} />
 
             <div className="counts-img">
-                <img src="/home3.png" alt="" />
+                <img src="/girl.png" alt="" />
                 <p>Receive tailored health tips and <br />
                     alerts based on your individual <br />
                     data trends, helping you make <br />
