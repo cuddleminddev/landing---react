@@ -23,6 +23,8 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
 }
 
 .quote {
@@ -59,4 +61,4 @@
     .quotes-cards {
         grid-template-columns: 1fr;
     }
-}
+}   
