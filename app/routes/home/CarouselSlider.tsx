@@ -77,11 +77,14 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
                         <div className="card-image">
                             <img src={pro.image} alt={pro.name} />
                             <div className="card-overlay">
-                                <p className="name">{pro.name}</p>
-                                <p className="specialty">{pro.specialty}</p>
+                                <div className="overlay-text">
+                                    <p className="name">{pro.name}</p>
+                                    <p className="specialty">{pro.specialty}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 ))}
             </div>
             <button className="carousel-button right" onClick={nextSlide}>

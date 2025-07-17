@@ -45,14 +45,57 @@
 
 .card-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    background: radial-gradient(ellipse at center,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.179) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     padding: 1rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    pointer-events: none;
+}
+
+.card-image:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay .overlay-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.card-overlay::after {
+    content: attr(data-name) "\A" attr(data-specialty);
+    white-space: pre;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card-overlay .name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-overlay .specialty {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-top: 0.3rem;
 }
 
 .card-image:hover .card-overlay {
@@ -109,6 +152,6 @@
     }
 
     .card-image img {
-        height: 250px;
+        height: 350px;
     }
 }
