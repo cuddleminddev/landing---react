@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "./styles/root.css";
 import Footer from "./footer";
 import MobileFooter from "./mobilefooter";
+import ScrollToTop from "./scrolltotop";
 
 export default function RootLayout() {
     const [showSplash, setShowSplash] = useState(true);
@@ -94,6 +95,7 @@ export default function RootLayout() {
                 </nav>
 
                 <main>
+                    <ScrollToTop />
                     <Outlet />
                 </main>
 
