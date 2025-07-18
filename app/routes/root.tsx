@@ -10,44 +10,75 @@ export default function RootLayout() {
     const splashLogoRef = useRef<HTMLImageElement | null>(null);
 
     useEffect(() => {
-        if (!splashLogoRef.current || !logoRef.current) return;
-
         const splashLogo = splashLogoRef.current;
         const navbarLogo = logoRef.current;
+        if (!splashLogo || !navbarLogo) return;
 
-        const splashRect = splashLogo.getBoundingClientRect();
-        const navbarRect = navbarLogo.getBoundingClientRect();
+        const animateSplash = () => {
+            // Reset initial transform state
+            splashLogo.style.transform = `translate(0, 0) scale(1) rotate(0deg)`;
+            splashLogo.style.transition = "none";
 
-        const deltaX = navbarRect.left - splashRect.left;
-        const deltaY = navbarRect.top - splashRect.top;
-        const scale = navbarRect.width / splashRect.width;
+            // Jump animation
+            splashLogo.style.animation = "jump 1s ease-in-out";
 
-        splashLogo.style.animation = "jump 1s ease-in-out";
+            // Fly after bounce
+            setTimeout(() => {
+                const splashRect = splashLogo.getBoundingClientRect();
+                const navbarRect = navbarLogo.getBoundingClientRect();
 
-        setTimeout(() => {
-            splashLogo.style.transition = "transform 1s ease-in-out";
-            splashLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
-        }, 1000);
+                const deltaX = navbarRect.left - splashRect.left;
+                const deltaY = navbarRect.top - splashRect.top;
+                const scale = navbarRect.width / splashRect.width;
 
-        const timer = setTimeout(() => {
-            setShowSplash(false);
-        }, 2000);
+                splashLogo.classList.add("fly");
+                splashLogo.style.transition = "transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+                splashLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale}) rotate(2deg)`;
+            }, 1000);
 
-        return () => clearTimeout(timer);
+            // Fade out splash screen
+            setTimeout(() => {
+                const splash = splashLogo.closest(".splash-screen");
+                if (splash) splash.classList.add("fade-out");
+            }, 2200);
+
+            // Remove splash
+            const timer = setTimeout(() => {
+                setShowSplash(false);
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        };
+
+        if (splashLogo.complete) {
+            requestAnimationFrame(animateSplash);
+        } else {
+            splashLogo.addEventListener("load", () => requestAnimationFrame(animateSplash));
+        }
     }, []);
 
     return (
         <>
             {showSplash && (
                 <div className="splash-screen">
-                    <img ref={splashLogoRef} src="/logo.png" alt="Logo" className="splash-logo" />
+                    <img
+                        ref={splashLogoRef}
+                        src="/logo.png"
+                        alt="Logo"
+                        className="splash-logo"
+                    />
                 </div>
             )}
 
             <div className={`main-layout ${showSplash ? "invisible-behind" : ""}`}>
                 <nav className="navbar navbar-expand-lg bg-white shadow-sm py-2">
                     <div className="container-fluid">
-                        <img ref={logoRef} src="/logo.png" alt="logo" className="navbar-logo" />
+                        <img
+                            ref={logoRef}
+                            src="/logo.png"
+                            alt="logo"
+                            className="navbar-logo"
+                        />
 
                         <div className="d-flex align-items-center d-lg-none ms-auto">
                             <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">

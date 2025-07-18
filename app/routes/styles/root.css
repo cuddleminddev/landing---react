@@ -14,30 +14,36 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  opacity: 1;
+}
+
+.splash-screen.fade-out {
+  animation: fadeOut 0.8s ease forwards;
 }
 
 .splash-logo {
   width: 120px;
   position: absolute;
   z-index: 10000;
+  transform-origin: center center;
+  will-change: transform;
 }
 
-/* Bounce effect before flying */
 @keyframes jump {
   0% {
     transform: scale(1) translateY(0);
   }
 
   30% {
-    transform: scale(1.2) translateY(-60px);
+    transform: scale(1.15) translateY(-50px);
   }
 
   60% {
-    transform: scale(1) translateY(0);
+    transform: scale(1.05) translateY(0);
   }
 
   80% {
-    transform: scale(1.1) translateY(-30px);
+    transform: scale(1.1) translateY(-20px);
   }
 
   100% {
@@ -45,8 +51,35 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.splash-logo.fly {
+  transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
 .main-layout.invisible-behind {
   opacity: 0;
+  pointer-events: none;
+}
+
+.splash-message {
+  position: absolute;
+  top: calc(100% + 30px);
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  animation: fadeIn 1s ease-in;
 }
 
 @media (max-width: 768px) {
