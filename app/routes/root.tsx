@@ -15,14 +15,10 @@ export default function RootLayout() {
         if (!splashLogo || !navbarLogo) return;
 
         const animateSplash = () => {
-            // Reset initial transform state
             splashLogo.style.transform = `translate(0, 0) scale(1) rotate(0deg)`;
             splashLogo.style.transition = "none";
-
-            // Jump animation
             splashLogo.style.animation = "jump 1s ease-in-out";
 
-            // Fly after bounce
             setTimeout(() => {
                 const splashRect = splashLogo.getBoundingClientRect();
                 const navbarRect = navbarLogo.getBoundingClientRect();
@@ -36,13 +32,11 @@ export default function RootLayout() {
                 splashLogo.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale}) rotate(2deg)`;
             }, 1000);
 
-            // Fade out splash screen
             setTimeout(() => {
                 const splash = splashLogo.closest(".splash-screen");
                 if (splash) splash.classList.add("fade-out");
             }, 2200);
 
-            // Remove splash
             const timer = setTimeout(() => {
                 setShowSplash(false);
             }, 3000);
@@ -61,24 +55,20 @@ export default function RootLayout() {
         <>
             {showSplash && (
                 <div className="splash-screen">
-                    <img
-                        ref={splashLogoRef}
-                        src="/logo.png"
-                        alt="Logo"
-                        className="splash-logo"
-                    />
+                    <img ref={splashLogoRef} src="/logo.png" alt="Logo" className="splash-logo" />
+                    <div className="splash-message">
+                        Loading
+                        <span className="loading-dots">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </div>
                 </div>
             )}
 
             <div className={`main-layout ${showSplash ? "invisible-behind" : ""}`}>
                 <nav className="navbar navbar-expand-lg bg-white shadow-sm py-2">
                     <div className="container-fluid">
-                        <img
-                            ref={logoRef}
-                            src="/logo.png"
-                            alt="logo"
-                            className="navbar-logo"
-                        />
+                        <img ref={logoRef} src="/logo.png" alt="logo" className="navbar-logo" />
 
                         <div className="d-flex align-items-center d-lg-none ms-auto">
                             <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">
