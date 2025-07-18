@@ -15,40 +15,57 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
 
-.aboutus-headings h3 {
+.aboutus-headings h4 {
     color: #1C3BA4;
-    font-size: 3rem;
+    font-size: 24px;
     margin: 0;
+    background-color: #009dd14e;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.aboutus-headings h2 {
+    font-size: 3rem;
 }
 
 .aboutus-headings p {
-    color: #1183DC;
-    font-size: 2rem;
+    color: #848484;
+    font-size: 1.5rem;
     line-height: 1.4;
-    font-weight: 600;
+    max-width: 1000px;
 }
 
 .aboutus-mission {
-    text-align: center;
     padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutus-mission-inner {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
 }
 
 .aboutus-mission h3 {
-    color: #009DD1;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .aboutus-mission p {
     font-size: 1.25rem;
     font-weight: 400;
-    max-width: 900px;
-    margin: 0 auto;
     line-height: 1.8;
+    color: #575757;
+    margin: 0;
 }
 
 .aboutus-impact {
@@ -57,7 +74,6 @@
 }
 
 .aboutus-impact h3 {
-    color: #009DD1;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -85,22 +101,74 @@
     margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-    .aboutus-headings h3 {
+@media (max-width: 992px) {
+    .aboutus-headings h2 {
         font-size: 2.5rem;
     }
 
     .aboutus-headings p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .aboutus-mission h3,
+    .aboutus-impact h3,
+    .aboutus-profe h3 {
+        font-size: 2rem;
+    }
+
+    .aboutus-mission p,
+    .aboutus-profe p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus-headings {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .aboutus-headings h4 {
+        font-size: 1rem;
+    }
+
+    .aboutus-headings h2 {
+        font-size: 2rem;
+    }
+
+    .aboutus-headings p {
+        font-size: 1rem;
+    }
+
+    .aboutus-mission h3,
+    .aboutus-impact h3,
+    .aboutus-profe h3 {
+        font-size: 1.75rem;
     }
 
     .aboutus-mission p,
     .aboutus-profe p {
         font-size: 1rem;
     }
+}
 
-    .aboutus-counts>div {
-        width: 100%;
-        max-width: 300px;
+@media (max-width: 480px) {
+    .aboutus-headings h2 {
+        font-size: 1.75rem;
+    }
+
+    .aboutus-headings p {
+        font-size: 0.95rem;
+    }
+
+    .aboutus-mission h3,
+    .aboutus-impact h3,
+    .aboutus-profe h3 {
+        font-size: 1.5rem;
+    }
+
+    .aboutus-mission p,
+    .aboutus-profe p {
+        font-size: 0.95rem;
     }
 }

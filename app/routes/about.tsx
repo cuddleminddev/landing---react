@@ -46,21 +46,23 @@ export default function About() {
     return (
         <div className="aboutus-container">
             <div className="aboutus-headings">
-                <h3>ABOUT US</h3>
+                <h4>About Cuddlemind</h4>
+                <h2>Transforming Mental Health Care</h2>
                 <p>
-                    We're not just offering support <br />
-                    we're standing beside you
+                    We're on a mission to make professional mental health support accessible, affordable, and effective for everyone, everywhere.
                 </p>
             </div>
 
             <div className="aboutus-mission">
-                <h3>Our Mission</h3>
-                <p>
-                    Our mission is to make mental health support simple, free, and stigma-free for everyone.
-                    Whether you’re a student, professional, caregiver, or just someone needing a safe space.
-                    With self-help tools, guided exercises, emotional support chats, and helpful content,
-                    our platform is built to help you feel better, faster.
-                </p>
+                <div className="aboutus-mission-inner">
+                    <h3>Our Mission</h3>
+                    <p>
+                        Our mission is to make mental health support simple, free, and stigma-free for everyone.
+                        Whether you’re a student, professional, caregiver, or just someone needing a safe space.
+                        With self-help tools, guided exercises, emotional support chats, and helpful content,
+                        our platform is built to help you feel better, faster.
+                    </p>
+                </div>
             </div>
 
             <div className="aboutus-impact">
@@ -71,9 +73,9 @@ export default function About() {
             <div className="aboutus-profe">
                 <h3>Meet Our Professionals</h3>
                 <p>
-                    Our doctors are certified mental health professionals with training and degrees in psychology,
-                    counseling, psychotherapy, or social work. They bring real-world experience to support your emotional,
-                    psychological, and behavioral well-being.
+                    Doctors on our platform is a certified mental health professional who has undergone training and education.
+                    They hold relevant degrees in their respective fields such as psychology, counseling, psychotherapy, or social work and
+                    experience in helping individuals manage emotional, psychological, and behavioral challenges.
                 </p>
             </div>
 
