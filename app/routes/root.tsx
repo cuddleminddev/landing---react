@@ -9,6 +9,7 @@ export default function RootLayout() {
     const [showSplash, setShowSplash] = useState(true);
     const logoRef = useRef<HTMLImageElement | null>(null);
     const splashLogoRef = useRef<HTMLImageElement | null>(null);
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     useEffect(() => {
         const splashLogo = splashLogoRef.current;
@@ -75,16 +76,16 @@ export default function RootLayout() {
                             <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">
                                 Download App
                             </button>
-                            <button className="navbar-toggler" type="button">
+                            <button className="navbar-toggler" type="button" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                         </div>
 
-                        <div className="collapse navbar-collapse justify-content-end">
+                        <div className={`collapse navbar-collapse justify-content-end ${isNavbarOpen ? "show" : ""}`}>
                             <div className="navbar-nav align-items-center gap-3 text-center text-lg-start">
-                                <Link className="nav-link" to="/">Home</Link>
-                                <Link className="nav-link" to="/about">About</Link>
-                                <Link className="nav-link" to="/contact">Contacts and FAQ</Link>
+                                <Link className="nav-link" to="/" onClick={() => setIsNavbarOpen(false)}>Home</Link>
+                                <Link className="nav-link" to="/about" onClick={() => setIsNavbarOpen(false)}>About</Link>
+                                <Link className="nav-link" to="/contact" onClick={() => setIsNavbarOpen(false)}>Contacts and FAQ</Link>
                             </div>
                         </div>
 
