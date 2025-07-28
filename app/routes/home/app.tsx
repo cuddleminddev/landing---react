@@ -4,7 +4,7 @@ export default function App() {
     return (
         <div className="app-container">
             <div className="app-left">
-                <img src="/home2.png" alt="logo" />
+                <img src="/1.png" alt="logo" />
             </div>
             <div className="app-right">
                 <div className="app-content">

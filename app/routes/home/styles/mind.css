@@ -59,6 +59,8 @@
     font-size: 1.8rem;
     color: gold;
     background-color: white;
+    border-radius: 8px;
+    padding: 0.2rem;
 }
 
 .mind-cards h3 {

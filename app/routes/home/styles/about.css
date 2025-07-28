@@ -13,10 +13,8 @@
 .about-left {
     flex: 1 1 250px;
     max-width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 15%;
     overflow: hidden;
-    background-color: white;
     order: 0;
 }
 

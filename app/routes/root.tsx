@@ -57,7 +57,7 @@ export default function RootLayout() {
         <>
             {showSplash && (
                 <div className="splash-screen">
-                    <img ref={splashLogoRef} src="/1.png" alt="Logo" className="splash-logo" />
+                    <img ref={splashLogoRef} src="/logo.png" alt="Logo" className="splash-logo" />
                     <div className="splash-message">
                         Loading
                         <span className="loading-dots">
@@ -73,9 +73,9 @@ export default function RootLayout() {
                         <img ref={logoRef} src="/1.png" alt="logo" className="navbar-logo" />
 
                         <div className="d-flex align-items-center d-lg-none ms-auto">
-                            <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">
+                            {/* <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">
                                 Download App
-                            </button>
+                            </button> */}
                             <button className="navbar-toggler" type="button" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
                                 <span className="navbar-toggler-icon"></span>
                             </button>
@@ -89,9 +89,9 @@ export default function RootLayout() {
                             </div>
                         </div>
 
-                        <button className="btn btn-primary rounded-pill px-4 ms-5 d-none d-lg-block">
+                        {/* <button className="btn btn-primary rounded-pill px-4 ms-5 d-none d-lg-block">
                             Download App
-                        </button>
+                        </button> */}
                     </div>
                 </nav>
 

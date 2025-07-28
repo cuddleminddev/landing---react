@@ -15,7 +15,8 @@ export default function Journey() {
                 </div>
 
                 <div className="journey-content">
-                    <p>Connect with licensed therapists and mental health <br /> professionals through our secure, easy-to-use platform. Get <br /> the support you deserve, when you need it.</p>
+                    <p>Connect with licensed therapists and mental health professionals through our secure, easy-to-use platform.</p>
+                    <p>Get the support you deserve, when you need it.</p>
                 </div>
 
                 <div className="journey-list">
