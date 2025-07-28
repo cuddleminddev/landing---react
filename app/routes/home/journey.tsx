@@ -6,7 +6,7 @@ export default function Journey() {
 
             <div className="journey-left">
                 <div className="journey-free">
-                    <p><i className="bi bi-star-fill"></i> #1 Free Care four Your Mind</p>
+                    <p><i className="bi bi-star-fill"></i> #1 Free Care for Your Mind</p>
                 </div>
 
                 <div className="journey-heading">
