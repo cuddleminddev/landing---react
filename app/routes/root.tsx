@@ -57,7 +57,7 @@ export default function RootLayout() {
         <>
             {showSplash && (
                 <div className="splash-screen">
-                    <img ref={splashLogoRef} src="/logo.png" alt="Logo" className="splash-logo" />
+                    <img ref={splashLogoRef} src="/1.png" alt="Logo" className="splash-logo" />
                     <div className="splash-message">
                         Loading
                         <span className="loading-dots">
@@ -70,7 +70,7 @@ export default function RootLayout() {
             <div className={`main-layout ${showSplash ? "invisible-behind" : ""}`}>
                 <nav className="navbar navbar-expand-lg bg-white shadow-sm py-2">
                     <div className="container-fluid">
-                        <img ref={logoRef} src="/logo.png" alt="logo" className="navbar-logo" />
+                        <img ref={logoRef} src="/1.png" alt="logo" className="navbar-logo" />
 
                         <div className="d-flex align-items-center d-lg-none ms-auto">
                             <button className="btn btn-primary rounded-pill px-3 me-2 mobile-btn">
