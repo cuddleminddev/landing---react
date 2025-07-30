@@ -12,14 +12,6 @@ export default function Count() {
     return (
         <div className="count-container">
             <StatsGrid stats={stats} />
-
-            <div className="counts-img">
-                <img src="/girl.png" alt="" />
-                <p>Receive tailored health tips and <br />
-                    alerts based on your individual <br />
-                    data trends, helping you make <br />
-                    proactive adjustments</p>
-            </div>
         </div>
     )
 }
