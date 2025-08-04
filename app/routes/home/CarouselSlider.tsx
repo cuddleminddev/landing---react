@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "./styles/carousel.css";
 
 type Professional = {
@@ -12,68 +14,42 @@ type CarouselSliderProps = {
 };
 
 export default function CarouselSlider({ professionals }: CarouselSliderProps) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [touchStartX, setTouchStartX] = useState<number | null>(null);
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkScreen = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        checkScreen();
-        window.addEventListener("resize", checkScreen);
-        return () => window.removeEventListener("resize", checkScreen);
-    }, []);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % professionals.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + professionals.length) % professionals.length);
-    };
-
-    const visibleCards = isMobile ? 1 : 3;
-
-    const getVisibleProfessionals = () => {
-        const result = [];
-        for (let i = 0; i < visibleCards; i++) {
-            const index = (currentIndex + i) % professionals.length;
-            result.push(professionals[index]);
-        }
-        return result;
-    };
-
-    const visibleProfessionals = getVisibleProfessionals();
-
-    const handleTouchStart = (e: React.TouchEvent) => {
-        setTouchStartX(e.touches[0].clientX);
-    };
-
-    const handleTouchEnd = (e: React.TouchEvent) => {
-        if (touchStartX === null) return;
-        const touchEndX = e.changedTouches[0].clientX;
-        const diff = touchStartX - touchEndX;
-        if (diff > 50) {
-            nextSlide();
-        } else if (diff < -50) {
-            prevSlide();
-        }
-        setTouchStartX(null);
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3,
+            slidesToSlide: 3,
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 768 },
+            items: 2,
+            slidesToSlide: 2,
+        },
+        mobile: {
+            breakpoint: { max: 768, min: 0 },
+            items: 1,
+            slidesToSlide: 1,
+        },
     };
 
     return (
-        <div
-            className="carousel-wrapper"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-        >
-            <button className="carousel-button left" onClick={prevSlide}>
-                &lt;
-            </button>
-            <div className="carousel-track">
-                {visibleProfessionals.map((pro, idx) => (
-                    <div key={idx} className="carousel-card">
+        <div className="carousel-wrapper">
+            <Carousel
+                responsive={responsive}
+                swipeable={true}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                showDots={false}
+                keyBoardControl={true}
+                containerClass="carousel-track"
+                itemClass="carousel-card"
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                arrows={true}
+                centerMode={false}
+            >
+                {professionals.map((pro, idx) => (
+                    <div key={idx}>
                         <div className="card-image">
                             <img src={pro.image} alt={pro.name} />
                             <div className="card-overlay">
@@ -84,12 +60,8 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
                             </div>
                         </div>
                     </div>
-
                 ))}
-            </div>
-            <button className="carousel-button right" onClick={nextSlide}>
-                &gt;
-            </button>
+            </Carousel>
         </div>
     );
 }

@@ -13,22 +13,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 3rem;
+    padding: 0 2rem;
     width: 100%;
     box-sizing: border-box;
 }
 
-.carousel-track {
-    display: flex;
-    overflow: hidden;
-    gap: 1rem;
-    width: 100%;
-    justify-content: center;
+.carousel-card {
+    padding: 0 0.5rem;
 }
 
-.carousel-card {
-    flex: 0 0 30%;
-    max-width: 300px;
+.react-multi-carousel-list {
+    overflow: visible;
+}
+
+.react-multi-carousel-dot-list {
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .card-image {
@@ -102,33 +102,6 @@
     transform: translateY(0);
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    background-color: rgba(2, 95, 22, 0.8);
-    border: none;
-    color: white;
-    padding: 0.7rem 1rem;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: rgba(1, 59, 15, 0.9);
-}
-
-.carousel-button.left {
-    left: 10rem;
-}
-
-.carousel-button.right {
-    right: 10rem;
-}
-
 @media (max-width: 768px) {
     .carousel-wrapper {
         padding: 0 1rem;
@@ -141,14 +114,6 @@
 
     .carousel-card {
         flex: 0 0 100%;
-    }
-
-    .carousel-button.left {
-        left: -1rem;
-    }
-
-    .carousel-button.right {
-        right: -1rem;
     }
 
     .card-image img {
