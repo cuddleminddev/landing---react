@@ -25,6 +25,15 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
         return () => window.removeEventListener("resize", checkScreen);
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % professionals.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [professionals.length]);
+
+
     const nextSlide = () => {
         setCurrentIndex((prev) => (prev + 1) % professionals.length);
     };
