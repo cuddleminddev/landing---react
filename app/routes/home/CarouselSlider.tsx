@@ -74,7 +74,7 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
             <div className="carousel-track">
                 {visibleProfessionals.map((pro, idx) => (
                     <div key={idx} className="carousel-card">
-                        <div className="card-image">
+                        <div className="card-image" data-name={pro.name} data-specialty={pro.specialty}>
                             <img src={pro.image} alt={pro.name} />
                             <div className="card-overlay">
                                 <div className="overlay-text">
