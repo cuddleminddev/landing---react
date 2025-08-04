@@ -143,12 +143,9 @@
         flex: 0 0 100%;
     }
 
-    .carousel-button.left {
-        left: -1rem;
-    }
-
+    .carousel-button.left,
     .carousel-button.right {
-        right: -1rem;
+        display: none;
     }
 
     .card-image img {
