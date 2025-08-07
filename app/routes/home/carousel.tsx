@@ -4,34 +4,39 @@ import CarouselSlider from "./CarouselSlider";
 
 const professionals = [
     {
-        name: "Dr. John Smith",
-        specialty: "Cardiologist",
-        image: "/pro1.png"
+        name: "Malavika",
+        specialty: "Consultant Psychologist",
+        image: "/Malavika.webp"
     },
     {
-        name: "Dr. Emily Davis",
-        specialty: "Neurologist",
-        image: "/pro1.png"
+        name: "Sreelekshmi",
+        specialty: "Psychiatric Social Worker",
+        image: "/Sreelekshmi.webp"
     },
     {
-        name: "Dr. Sarah Lee",
-        specialty: "Pediatrician",
-        image: "/home1.png"
+        name: "Reshma ",
+        specialty: "College Psychologist",
+        image: "/Reshma.webp"
     },
     {
-        name: "Dr. David Brown",
-        specialty: "Orthopedic Surgeon",
-        image: "/home2.png"
+        name: "Krishnaveni",
+        specialty: "Counselling Psychologist - Trauma informed | Queer affirmative therapist",
+        image: "/Krishnaveni.webp"
     },
     {
-        name: "Dr. Olivia Wilson",
-        specialty: "Dermatologist",
-        image: "/home3.png"
+        name: "Anju",
+        specialty: "Consultant Psychologist",
+        image: "/Anju.webp"
     },
     {
-        name: "Dr. Michael Chen",
-        specialty: "Oncologist",
-        image: "/home4.png"
+        name: "Fathima",
+        specialty: "Consultant Psychologist",
+        image: "/Fathima.webp"
+    },
+    {
+        name: "Athira",
+        specialty: "Consultant Psychologist",
+        image: "/Athira.webp"
     }
 ];
 
