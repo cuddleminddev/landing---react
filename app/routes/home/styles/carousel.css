@@ -25,6 +25,7 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    height: 310px;
 }
 
 .carousel-track::-webkit-scrollbar {
