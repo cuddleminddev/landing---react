@@ -1,6 +1,7 @@
 .carousel-container {
-    padding: 1rem;
     font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 .carousel-heading {
@@ -9,172 +10,77 @@
 }
 
 .carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 3rem;
+    overflow: hidden;
     width: 100%;
+    padding: 2rem 1rem;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
 }
 
 .carousel-track {
     display: flex;
-    overflow: hidden;
-    gap: 1rem;
-    width: 100%;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel-card {
-    flex: 0 0 30%;
-    max-width: 300px;
+    flex: 0 0 auto;
+    width: 220px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.carousel-card:hover {
+    transform: scale(1.05);
 }
 
 .card-image {
     position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card-image img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
     display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
 }
 
 .card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    background: radial-gradient(ellipse at center,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.179) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     padding: 1rem;
     box-sizing: border-box;
-    text-align: center;
-    pointer-events: none;
 }
 
-.card-image:hover .card-overlay {
-    opacity: 1;
-}
-
-.card-overlay .overlay-text {
-    color: white;
+.name {
     font-size: 1rem;
-    font-weight: bold;
-    pointer-events: none;
-}
-
-.card-overlay::after {
-    content: attr(data-name) "\A" attr(data-specialty);
-    white-space: pre;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.card-overlay .name {
-    font-size: 1.25rem;
     font-weight: bold;
     margin: 0;
 }
 
-.card-overlay .specialty {
-    font-size: 1rem;
-    opacity: 0.85;
-    margin-top: 0.3rem;
-}
-
-.card-image:hover .card-overlay {
-    transform: translateY(0);
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    background-color: rgba(2, 95, 22, 0.8);
-    border: none;
-    color: white;
-    padding: 0.7rem 1rem;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: rgba(1, 59, 15, 0.9);
-}
-
-.carousel-button.left {
-    left: 10rem;
-}
-
-.carousel-button.right {
-    right: 10rem;
-}
-
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        padding: 0 1rem;
-    }
-
-    .carousel-track {
-        flex-direction: row;
-        gap: 0;
-    }
-
-    .carousel-card {
-        flex: 0 0 100%;
-    }
-
-    .carousel-button.left,
-    .carousel-button.right {
-        display: none;
-    }
-
-    .card-overlay {
-        display: none;
-    }
-
-    .card-image {
-        position: relative;
-    }
-
-    .card-image::after {
-        content: attr(data-name) "\A" attr(data-specialty);
-        white-space: pre;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        color: white;
-        font-weight: bold;
-        font-size: 1rem;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 0.75rem 1rem;
-        box-sizing: border-box;
-        border-radius: 0 0 10px 10px;
-        line-height: 1.4;
-        text-align: center;
-    }
-
-    .card-image img {
-        height: 350px;
-    }
+.specialty {
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.9;
 }
