@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles/carousel.css";
 
 type Professional = {
@@ -15,6 +15,8 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStartX, setTouchStartX] = useState<number | null>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [isInteracting, setIsInteracting] = useState(false);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const checkScreen = () => {
@@ -26,13 +28,16 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
     }, []);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % professionals.length);
-        }, 3000);
+        if (!isInteracting) {
+            intervalRef.current = setInterval(() => {
+                setCurrentIndex((prev) => (prev + 1) % professionals.length);
+            }, 3000);
+        }
 
-        return () => clearInterval(interval);
-    }, [professionals.length]);
-
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [professionals.length, isInteracting]);
 
     const nextSlide = () => {
         setCurrentIndex((prev) => (prev + 1) % professionals.length);
@@ -57,6 +62,7 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
 
     const handleTouchStart = (e: React.TouchEvent) => {
         setTouchStartX(e.touches[0].clientX);
+        setIsInteracting(true);
     };
 
     const handleTouchEnd = (e: React.TouchEvent) => {
@@ -69,6 +75,15 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
             prevSlide();
         }
         setTouchStartX(null);
+        setTimeout(() => setIsInteracting(false), 1000); // resume autoplay after delay
+    };
+
+    const handleMouseEnter = () => {
+        setIsInteracting(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsInteracting(false);
     };
 
     return (
@@ -76,6 +91,8 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
             className="carousel-wrapper"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             <button className="carousel-button left" onClick={prevSlide}>
                 &lt;
@@ -93,7 +110,6 @@ export default function CarouselSlider({ professionals }: CarouselSliderProps) {
                             </div>
                         </div>
                     </div>
-
                 ))}
             </div>
             <button className="carousel-button right" onClick={nextSlide}>
