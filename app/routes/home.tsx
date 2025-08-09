@@ -8,6 +8,7 @@ import Matter from "./home/matter";
 import Mind from "./home/mind";
 import Quotes from "./home/quotes";
 import Testimonials from "./home/testimonials";
+import '../app.css'
 
 export default function Home() {
   return (

@@ -3,7 +3,6 @@
 footer {
     background-color: #f8f9fa;
     padding: 2rem 3rem;
-    font-family: 'Arial', sans-serif;
 }
 
 /* Top section */
@@ -25,7 +24,6 @@ footer .top .left {
 }
 
 footer .top .left h2 {
-    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 48px;
     color: #000;
@@ -42,7 +40,6 @@ footer .top .right {
 }
 
 footer .top .right p {
-    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;

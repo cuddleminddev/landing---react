@@ -3,7 +3,6 @@
 .mobile-footer {
     background-color: #f8f9fa;
     padding: 2rem 1rem;
-    font-family: 'Arial', sans-serif;
 }
 
 .footer-container {
@@ -34,7 +33,6 @@
 }
 
 .footer-quote {
-    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     color: #000;
 }
